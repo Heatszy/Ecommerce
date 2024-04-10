@@ -1,0 +1,43 @@
+.Footer{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    margin-top:40px;
+}
+
+.FooterLogo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.Footer hr{
+    width:80%;
+    margin:0;
+    border:none;
+    border-radius: 10px;
+    height:3px;
+    background: rgba(0, 0, 0, 0.168);
+}
+
+.FooterLogo p{
+    font-size:40px;
+    font-weight:600;
+}
+
+.Footerdounia{
+    color:coral;
+}
+
+.Footershop{
+    margin-left:-60px;
+    margin-bottom:-5px;
+    color:#FF4141;
+}
+
+.Footer img{
+    width:100px;
+    height:100px;
+}
+
