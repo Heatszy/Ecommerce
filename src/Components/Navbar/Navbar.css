@@ -3,7 +3,7 @@
     justify-content:space-around;
     padding:16px;
     box-shadow:0 1px 3px -2px black;
-    background-color: #b15858;
+    background-color: #221d1dd6;
     align-items: center;
 }
 
@@ -13,19 +13,9 @@
     gap:10px;
 }
 
-.logo p{
-    font-size:20px;
-    font-weight:600;
-}
-
-.dounia{
-    color:coral;
-}
-
-.shop{
-    margin-left:-60px;
-    margin-bottom:-5px;
-    color:#FF4141;
+.logo img{
+    height:100px;
+    width:200px;
 }
 
 .nav-menu{
@@ -45,6 +35,9 @@
     justify-content:center;
     gap:3px;
     cursor:pointer;
+}
+.nav-menu a{
+    color:white;
 }
 
 .nav-menu hr{
@@ -148,33 +141,95 @@
 
 @media(max-width:800px){
     .navbar{
-        padding: 10px 0px;
+        position:fixed;
+        z-index:999;
+        top:0;
+        right:0;
+        left:0;
+        height: 60px;       
+        background:#9c7a7a;
+        padding-left:0;
+        padding-right: 0;
     }
+    .overlayy {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+        z-index: -1; /* Ensure the overlay appears on top of other content */
+      }
     .nav-dropdown{
         display: block;
         width:30px;
-        rotate: -90deg;
         transition: 0.5s;
         cursor: pointer;
+        margin-left: -20px;
     }
     .nav-menu{
         display: none;
-        height: 80px;
-        width: 100%;
+        width: 30%;
         position: absolute;
-        background-color: white;
+        background-color: #fff;
         justify-content: center;
-        top: 75px;
+        top:75px;
     }
 
     .nav-menu-visible{
-        display: flex;
-        width:80%;
+        display: grid;
+        width:30%;
+        height:200px;
+        justify-content: center;
+        animation: slideIn 0.5s ease-in-out forwards;  
+        padding: 10px 0px;  
+        border-radius: 10px;
+    }
+    .nav-menu li{
+        height:30px;
+        display: grid;
+        align-items: center;
     }
 
-    .nav-dropdown.open{
-        transform: rotate(90deg);
+    .nav-menu li a{
+        color: black;
     }
+
+    @keyframes slideIn {
+        from {
+          transform: translateY(-20%);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+      
+      @keyframes slideOut {
+        from {
+          transform: translateY(0);
+          opacity: 1;
+        }
+        to {
+          transform: translateY(-100%);
+          opacity: 0;
+        }
+      }
+
+    ul{
+        padding:0;
+    }
+
+    .logo img{
+        transform: scale(0.7);
+        margin-left:-20px;
+    }
+    .logo{
+        margin-left:-20px;
+        margin-right: 20px;
+    }
+
 }
 
 @media(max-width:500px){
@@ -182,11 +237,10 @@
         width: 8px 0px;
         gap: 0;
     }
-    .nav-logo{
+    .logo{
         transform: scale(0.8);
     }
-    .nav-menu{
-        height: 70px;
+    .nav-menu{    
         top: 75px;
     }
     .nav-login-cart{

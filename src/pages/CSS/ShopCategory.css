@@ -89,6 +89,11 @@
         font-size: 13px;
     }
 }
+@media(max-width:800px){
+    .shopcategory-banner{
+        padding-top:70px;
+    }
+}
 @media(max-width:500px){
     .shopcategory-products{
         grid-template-columns: 1fr 1fr;

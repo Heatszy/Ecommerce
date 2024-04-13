@@ -20,6 +20,7 @@
 .productdisplay-main-img{
     width: 586px;
     height:700px;
+    border-radius: 18px;
 }
 
 .productdisplay-right{
@@ -122,15 +123,20 @@
    left: 50%;
    transform: translate(-50%, -50%);
    z-index: 1000; /* Ensure it's above the overlay */
+   height:50px;
+   width: 400px;
+   justify-content: center;
+   display: flex;
+   align-items: center;
  }
  
  .message {
-   background-color: #fefefeb5;
+   background-color: #0c3724;
    padding: 10px;
-   border: 1px solid #ccc;
    border-radius: 18px;
    font-size: 26px;
    font-weight: 500;
+   color: #fff;
  }
 
  .productdisplay-right-sizes div.active{
