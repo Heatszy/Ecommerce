@@ -22,10 +22,10 @@ const Navbar = () =>{
             </div>
             <img className='nav-dropdown' onClick={dropdown_toggle} src={nav_dropdown} alt="" />
             <ul  className={`nav-menu ${isOpen ? 'nav-menu-visible' : ''}`}>
-                <li onClick={()=>{setMenu("shop"); dropdown_toggle()}}><Link style={{textDecoration:'none'}} to='/'>Shop</Link>{menu==="shop"? <hr/>:<></>}</li>
-                <li onClick={()=>{setMenu("men"); dropdown_toggle()}}><Link style={{textDecoration:'none'}} to='/men'>Men</Link>{menu==="men"? <hr/>:<></>}</li>
-                <li onClick={()=>{setMenu("women"); dropdown_toggle()}}><Link style={{textDecoration:'none'}} to='/women'>Women</Link>{menu==="women"? <hr/>:<></>}</li>
-                <li onClick={()=>{setMenu("kids"); dropdown_toggle()}}><Link style={{textDecoration:'none'}} to='/kids'>Kids</Link>{menu==="kids"? <hr/>:<></>}</li>
+                <li onClick={()=>{setMenu("shop")}}><Link style={{textDecoration:'none'}} to='/'>Shop</Link>{menu==="shop"? <hr/>:<></>}</li>
+                <li onClick={()=>{setMenu("men")}}><Link style={{textDecoration:'none'}} to='/men'>Men</Link>{menu==="men"? <hr/>:<></>}</li>
+                <li onClick={()=>{setMenu("women")}}><Link style={{textDecoration:'none'}} to='/women'>Women</Link>{menu==="women"? <hr/>:<></>}</li>
+                <li onClick={()=>{setMenu("kids")}}><Link style={{textDecoration:'none'}} to='/kids'>Kids</Link>{menu==="kids"? <hr/>:<></>}</li>
             </ul>
             {isOpen && (<div className="overlayy" onClick={()=>{setIsOpen(false)}}></div>)}
             <div className="nav-login-cart">
